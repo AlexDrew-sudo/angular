@@ -1,0 +1,29 @@
+<!-- <app-xyz [buttonText]="'hello world'"></app-xyz>
+<app-my-component [headerText]="'Input Header'" [pText]="'paragraph input'"></app-my-component>
+<app-my-component [headerText]="'Second data'" [pText]="'Second paragraph input'"></app-my-component>
+<buttonoutput (buttonEmit)="alertOutput($event)"></buttonoutput>
+<br>
+<one-way></one-way><br> -->
+<!-- <two-way></two-way><br>
+<div class=text>
+    <output-text (textEmit)="updateText($event)"></output-text>
+    <p>Output Text: {{text}}</p>
+</div>
+<br>
+<div class=average>
+    <app-radio (radioEmit)="updateRadio($event)"></app-radio>
+    <p>Average: {{radio}}</p> -->
+<!-- </div>
+<br>
+<two-buttons></two-buttons> -->
+<h2>Hero Selected: {{selectedHero ? selectedHero.heroName: ''}}</h2>
+<hero *ngIf="selectedHero" [hero]="selectedHero" (click)="selectedHero=null"></hero>
+<div id="heroes">
+    <hero *ngFor="let hero of heroes; index as i" [hidden]="selectedHero==heroes[i]" [hero]=hero (click)="selectHero(hero)"></hero>
+</div>
+<select>
+    <option *ngFor="let hero of heroes" value="">hello</option>
+</select>
+<!-- we can name components with #name and then pass that component along by using the name 
+they need to have unique names or else it will only find the first one  -->
+<router-outlet></router-outlet>

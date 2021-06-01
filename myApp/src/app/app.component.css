@@ -1,0 +1,42 @@
+.text{
+    border: groove cornflowerblue;
+    border-radius: .5em;
+    text-align: center;
+    background-color: grey;
+    color:  rgb(6, 41, 6);
+}
+.average{
+    border: groove cornflowerblue;
+    border-radius: .5em;
+    text-align: center;
+
+}
+#heroes{
+    padding: .5em;
+    border: solid black 1px;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+
+
+}
+#heroes hero{
+    width:30%;
+   
+}
+#heroes hero:hover{
+    transform: translateY(-4px);
+    cursor: pointer;
+    transform: scale(1.2);
+    
+}
+#heroes hero:active{
+    transform: translateY(-2px);
+    
+}
+hero:hover{
+    cursor:pointer
+}
+.myHero{
+    color:red
+}

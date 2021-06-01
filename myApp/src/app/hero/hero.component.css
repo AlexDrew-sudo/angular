@@ -1,0 +1,18 @@
+div{
+    border: solid gray 1px;
+  border-radius: 1em;
+  padding: .5em;
+  text-align: left;
+  height: 200px;
+ /* background-image: linear-gradient(to bottom right, #f11712, #ffe63a, #0099f7); superman color scheme */
+
+  box-shadow: 0 5px 20px black;
+}
+div * {
+    margin: 1px;
+
+}
+p:first-child{
+    font-size: 16pt;
+    margin-bottom: .5em;
+}

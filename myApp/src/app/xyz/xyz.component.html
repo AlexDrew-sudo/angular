@@ -1,0 +1,11 @@
+<div>
+    <h1 (click)="openAcc()">{{header}} </h1>
+    <div class="accordian">
+        <p>Click a button and see what happens.</p>
+        <button (click)="alertSomething('hello world')">{{buttonText}}</button>
+        <button (click)="alertSomething('Today is Monday')">Today is Monday</button>
+        <button (click)="alertSomething('You Clicked me!')">Click Me!</button>
+        <button (click)="clickB([1,2,3,4,5])">Make an Array</button>
+        <button (click)="clickB([6,7,8,9,10])">Make an Array</button>
+    </div>
+</div>

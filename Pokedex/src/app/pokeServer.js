@@ -61,6 +61,54 @@ app.get("/api/pokemon", (req, res) => {// get all pokemon
  
  })
 
+ app.post("/api/user/create", async(req,res)=>{
+let password= await bcrypt.hash(req.body.password, saltRounds)
+let user= req.body.user
+let query= "INSERT INTO `Pokedex`.`users`(`password`,`username`)VALUES(?,?);"
+
+
+db.query(query, [password, user], (err,data,fields)=>{
+    if(err) {
+        console.log(err)
+        res.status(500).send({message:"couldnt create user"})
+    } else{
+        res.send(data)
+        console.log(data)
+    }
+})
+ })
+ app.post("/api/user/login" ,(req,res)=>{
+    let password= req.body.password
+    let username= req.body.user
+    let query="Select * from users Where UserName=?;"
+
+    db.query(query, [username], async(err,data,fields)=>{
+        if (err){
+            res.status(500).send({message:"error orrcured"})
+        }else if( data && data.length==0){
+            //empty request 
+            res.status(400).send({message:"Username not found"})
+            return
+        }else{
+            const comparison= await bcrypt.compare(password,data[0].password)
+            if(comparison){
+                  console.log("it worked")
+                res.send(data)
+              
+        
+            } else{
+                res.status(204).send({message:"passord doesnt match"})
+            }
+
+        }
+    })
+
+
+
+ 
+
+})
+
 
 
 

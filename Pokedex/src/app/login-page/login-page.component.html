@@ -1,1 +1,9 @@
-<p>login-page works!</p>
+<div class=container>
+     <div class="form">
+          <div> <input type="text" placeholder="Enter Username" [(ngModel)]="username"><br>
+               <span>
+                    <input id="login" type="password" placeholder="Enter Password" [(ngModel)]="password">
+
+                    <button (click)="showPasswordLog()">Show Password</button></span><br>
+               <button class="login" (click)="login()">Login</button>
+               <button class="login" (click)="create()">Create User</button>

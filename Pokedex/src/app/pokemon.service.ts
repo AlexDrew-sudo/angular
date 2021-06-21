@@ -17,5 +17,8 @@ export class PokemonService {
     console.log("trying")
     return this.http.get(`${baseURl}/api/pokemon`)
   }
+  createUser(body:object):Observable<any> {
+    return this.http.post(`${baseURl}/api/user/create`, body)
+  }
 
 }

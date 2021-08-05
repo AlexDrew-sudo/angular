@@ -1,1 +1,26 @@
-<p>account-page works!</p>
+ <img class="homeBtn" routerLink="" src="../../assets/home.png" width="40em" height="40em"><h1>Total Caught: {{numCaught}}</h1>
+ <br>
+ <!-- <select>
+      <option (click)="showAll()">All</option>
+      <option *ngFor ="let type of types" (click)="switchType(type)" >{{type}}</option>
+ </select>
+ <button (click)="switchType(types[1])"></button> -->
+
+<div class="wrapper">
+      
+         <div *ngFor="let pokemon of pokemons" class="pokemonCard">
+          <img src={{pokemon.picture}} alt="">
+          <p>{{pokemon.name}}</p>
+          <p [ngStyle]="{color:getColor(pokemon.type1)}" >{{pokemon.type1}}</p>
+          <p [ngStyle]="{color:getColor(pokemon.type2)}" >{{pokemon.type2}}</p>
+     </div>
+
+
+     <!-- <div *ngFor="let pokemon of typePokemon" class="pokemonCard">
+          <img src={{pokemon.picture}} alt="">
+          <p>{{pokemon.name}}</p>
+          <p [ngStyle]="{color:getColor(pokemon.type1)}" >{{pokemon.type1}}</p>
+     </div> -->
+
+
+</div>

@@ -1,3 +1,43 @@
-<p>main-page works!</p>
-<app-the-dex></app-the-dex>
-<button  routerLink="login">Sign in</button>
+
+<div class="wrapper">
+     <ul>
+          <li *ngIf=user>{{user.username}}'s Pokedex</li>
+          <li>Account<br><br>
+          <ul>
+               <li *ngIf="loading"><div class="lds-ring"><div></div><div></div><div></div><div></div></div> </li>
+               <li *ngIf="!user" routerLink="login">Login</li>
+               <li routerLink="account" *ngIf="user">Caught Pokemon</li>
+               <li *ngIf="user" (click)="logout()"> Lougout </li>
+          </ul>
+     </li>
+          <li>Get More<br><br>
+               <ul>
+                    <li (click)="addBerries()">Berries+5<br>Current:{{berryCount}}
+                    </li>
+                    <li (click)="addPokeballs()">Pokeballs+5 <br>Current:{{pokeballCount}}</li>
+               </ul>
+          </li>
+     </ul>
+     <br>
+<div class="pokedex">
+     <app-the-dex></app-the-dex>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+

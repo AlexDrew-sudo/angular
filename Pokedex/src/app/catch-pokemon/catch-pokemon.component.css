@@ -1,0 +1,39 @@
+.Pokemon{
+     float: right;
+     height:10em;
+}
+.pokeball{
+     float:right;
+    
+}
+.header{
+     text-align: center;
+     color: var(--lighterGreen)
+}
+.Trainer{
+float: left;
+height:30em;
+}
+.options:hover{
+     cursor: pointer;
+}
+p:hover:before{
+     color:black;
+     content:"➡";
+}
+.options{
+     display:inline-flex;
+     flex-wrap: wrap;
+     border: double;
+     position:absolute;
+     background: slategray;
+     width:20em;
+     height:5em;
+     bottom:20em;
+     right:0;
+     color:black
+    
+}
+.options p{
+margin-left: 2em;
+}

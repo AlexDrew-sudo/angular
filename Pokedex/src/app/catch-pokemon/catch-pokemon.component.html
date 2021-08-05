@@ -1,0 +1,14 @@
+<div *ngIf="caught" class="header"><h1>{{pokemon.name}} was Caught!</h1><button routerLink="">Return to Home</button></div>
+
+<img *ngIf="!caught" class="Pokemon" src= {{pokemon.picture}}
+>
+<img *ngIf="caught" class="Pokeball" src="../../assets/pokeball.png" height="100em" >
+<div class="options">
+    <span> <p *ngIf="numBerries>0" (click)="giveBerry()">Give Berry {{numBerries}}</p>
+     <p *ngIf="pokeballCount>0" (click)="throwPokeball()" >Throw Ball {{pokeballCount}}</p></span><br><p routerLink="">Run</p>
+    
+</div>
+<img class="Trainer" src="../../assets/trainerBack.png">
+
+<!-- 
+ -->

@@ -1,0 +1,28 @@
+.wrapper{
+   
+     display:flex;
+     flex-direction:left;
+     justify-content: space-evenly;
+     flex-wrap: wrap;
+   
+ 
+}
+h1{
+text-align: center;
+color: var(--lighterGreen)}
+.wrapper .pokemonCard {
+     width:100;
+     border: solid black 1px;
+     border-radius: 2em;
+     padding: 2em;
+     margin:1em;
+     background: slategray;
+    
+}
+.homeBtn:hover{
+     cursor: pointer;
+}
+.pokemonCard img{
+     height:4em;
+     width:4em;
+}

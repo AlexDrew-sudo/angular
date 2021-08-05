@@ -1,4 +1,5 @@
 export class Pokemon {
+     caught: boolean =false;
      id: number;
      name: string;
      type1: string;
@@ -8,5 +9,8 @@ export class Pokemon {
      weight: number;
      entryText: string;
      catchRate: number;
-     picture: string
+     picture: string;
+     evolesToID?: number;
+    
+   
 }

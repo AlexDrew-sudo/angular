@@ -32,8 +32,8 @@
      font-family: "Roboto", sans-serif;
      text-transform: uppercase;
      outline: 0;
-     background-color: #328f8a;
-     background-image: linear-gradient(45deg,#328f8a,#08ac4b);
+     background-color: var(--darkerGreen);
+     /* background-image: linear-gradient(45deg,var(--darkerGreen),var(--lighterGreen)); */
      width: 100%;
      border: 0;
      padding: 15px;
@@ -52,7 +52,10 @@
      color: #4CAF50;
      text-decoration: none; 
    }
-   
+   .form p{
+     color: red;
+     font-size: 12pt;
+   }
    .container {
   display: flex;
   justify-content: center;
@@ -66,3 +69,40 @@
      -webkit-font-smoothing: antialiased;
      -moz-osx-font-smoothing: grayscale;
    }
+   button{
+     background-color: var(--lighterGreen);
+     border-radius: 2em;
+   }
+   .lds-ring {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+  }
+  .lds-ring div {
+    box-sizing: border-box;
+    display: block;
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    margin: 8px;
+    border: 8px solid var(--lighterGreen);
+    border-radius: 50%;
+    animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+    border-color: var(--lighterGreen) transparent transparent transparent;
+  }
+  .lds-ring div:nth-child(1) {
+    animation-delay: -0.45s;
+  }
+  .lds-ring div:nth-child(2) {
+    animation-delay: -0.3s;
+  }
+
+  @keyframes lds-ring {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }

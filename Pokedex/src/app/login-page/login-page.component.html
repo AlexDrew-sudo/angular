@@ -1,9 +1,20 @@
 <div class=container>
      <div class="form">
-          <div> <input type="text" placeholder="Enter Username" [(ngModel)]="username"><br>
-               <span>
-                    <input id="login" type="password" placeholder="Enter Password" [(ngModel)]="password">
+          <div> 
+               
+               <input (click)="noText()" type="text" placeholder="Enter Username" [(ngModel)]="username">
+              
+                    <input (click)="noPasswordText()" id="login" type="password" placeholder="Enter Password" [(ngModel)]="password">
+                 
+                         <button  id="password" (click)="showPasswordLog()">Show/Hide Password</button>
 
-                    <button (click)="showPasswordLog()">Show Password</button></span><br>
+                         <p *ngIf="loginProblem">*Incorrect Username/Password Try again*</p>
+                         <p *ngIf="invalidUser">Username can only contain letters, numbers, underscore or period!</p>
+                         <p *ngIf="longer">Password must be at least 6 Characters</p>
+                         <p *ngIf="inUse">The username {{username}} is already in use, please select another</p>
+                         <div *ngIf="loading" class="lds-ring"><div></div><div></div><div></div><div></div></div>
                <button class="login" (click)="login()">Login</button>
                <button class="login" (click)="create()">Create User</button>
+          </div>
+     </div>
+</div>

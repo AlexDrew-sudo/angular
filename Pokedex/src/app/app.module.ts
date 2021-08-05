@@ -8,6 +8,7 @@ import { MainPageComponent } from './main-page/main-page.component';
 import { TheDexComponent } from './the-dex/the-dex.component';
 import { AccountPageComponent } from './account-page/account-page.component';
 import { LoginPageComponent } from './login-page/login-page.component';
+import { CatchPokemonComponent } from './catch-pokemon/catch-pokemon.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { LoginPageComponent } from './login-page/login-page.component';
     MainPageComponent,
     TheDexComponent,
     AccountPageComponent,
-    LoginPageComponent
+    LoginPageComponent,
+    CatchPokemonComponent
   ],
   imports: [
     BrowserModule,
